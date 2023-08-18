@@ -1,0 +1,35 @@
+/*文字黑幕*/
+.heimu {
+  position: relative;
+}
+
+.heimu:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--heimu-bg-color);
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+
+.heimu:hover:before {
+  opacity: 0;
+}
+
+/*文字模糊遮罩*/
+.blurmask {
+  position: relative;
+  filter: blur(5px); 
+  transition: filter 0.5s; 
+}
+
+.blurmask:hover {
+  filter: blur(0); 
+}
+
+.blurmask:hover:before {
+  opacity: 0;
+}
